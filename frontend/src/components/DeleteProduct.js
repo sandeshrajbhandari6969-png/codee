@@ -8,7 +8,7 @@ export default function DeleteProduct() {
     e.preventDefault();
 
     axios
-      .post(`http://localhost:5000/deleteProduct/${productName}`)
+      .delete(`http://localhost:5000/deleteProduct/${productName}`)
       .then(() => alert("Product deleted successfully"))
       .catch((err) => alert(err.response.data.error));
   };
